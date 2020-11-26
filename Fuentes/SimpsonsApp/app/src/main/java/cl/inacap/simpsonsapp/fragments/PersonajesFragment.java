@@ -57,7 +57,7 @@ public class PersonajesFragment extends Fragment {
             public void onResponse(JSONObject response) {
                 try {
                     personajes.clear();
-                    Personaje[] arreglo = new Gson().fromJson(response.getString("quotes"),Personaje[].class);
+                    Personaje[] arreglo = new Gson().fromJson(response.getString(""),Personaje[].class);
                     personajes.addAll(Arrays.asList(arreglo));
 
                 }catch(Exception ex){

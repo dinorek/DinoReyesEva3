@@ -4,33 +4,66 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-android:orientation="vertical"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
     <include layout="@layout/toolbar"></include>
 
-    <com.google.android.material.tabs.TabLayout
-        android:layout_width="match_parent"
-        android:id="@+id/tab_layout"
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="@string/txt_bienvenida"
+        android:layout_gravity="center"
+        android:textColor="@color/colorText"
+        android:layout_marginTop="@dimen/margintop_txt"
+        android:textSize="@dimen/Size_txt"
+        android:textStyle="bold"
         android:layout_height="wrap_content">
+    </TextView>
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:text="@string/personajes_tab"
-            android:layout_height="wrap_content"/>
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/frases_tab" />
-
-    </com.google.android.material.tabs.TabLayout>
-    <androidx.viewpager.widget.ViewPager
-        android:layout_height="wrap_content"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:id="@+id/view_pager">
+        android:layout_height="100dp">
+        <TextView
+            android:layout_width="250dp"
+            android:layout_marginTop="32dp"
+            android:text="Cantidad de Frases que quiere:"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/size_txt_spinner"
+            android:layout_marginLeft="10dp"
+            android:layout_height="45dp">
+        </TextView>
 
-    </androidx.viewpager.widget.ViewPager>
+        <Spinner
+            android:layout_width="80dp"
+            android:id="@+id/spinner"
+            android:layout_marginTop="30dp"
+            android:padding="20dp"
+            android:layout_height="wrap_content">
+        </Spinner>
+    </LinearLayout>
 
+    <Button
+        android:layout_width="160dp"
+        android:id="@+id/button"
+        android:text="Solicitar consejo"
+        android:textAllCaps="true"
+        android:background="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:layout_marginLeft="120dp"
+        android:layout_height="50dp">
+    </Button>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ListView
+            android:layout_width="match_parent"
+            android:id="@+id/list_main"
+            android:layout_height="330dp">
+        </ListView>
+
+    </LinearLayout>
 
 </LinearLayout>
